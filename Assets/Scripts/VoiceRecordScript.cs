@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VoiceRecordScript : MonoBehaviour {
-
 	
 	AudioSource audioRecSource;
 	AudioSource audioPlaySource;
@@ -11,6 +10,11 @@ public class VoiceRecordScript : MonoBehaviour {
 	public int frequency = 44100;
 
 	private string micName = "";
+
+	[System.NonSerialized]
+	public bool recStart;
+
+	TimerCountUpScript countUp;
 
 	// Use this for initialization
 	void Start () {
@@ -21,16 +25,22 @@ public class VoiceRecordScript : MonoBehaviour {
 		
 		audioRecSource = GetComponent<AudioSource>();
 		audioPlaySource = GetComponent<AudioSource>();
+
+		countUp = GetComponent<TimerCountUpScript> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(countUp.minutes * 60 + countUp.seconds >= maxLengthSec) {
+			recStart = false;
+		}
 	}
 
 	public void RecStart () {
 		Debug.Log("Rec Start.");
 		audioRecSource.clip = Microphone.Start(micName, false, maxLengthSec, frequency);
+
+		recStart = true;
 	}
 
 	public void RecEnd () {
@@ -40,6 +50,8 @@ public class VoiceRecordScript : MonoBehaviour {
 		} else {
 			Debug.Log("Not Recoding Now.");
 		}
+
+		recStart = false;
 	}
 
 	public void RecPlay () {
