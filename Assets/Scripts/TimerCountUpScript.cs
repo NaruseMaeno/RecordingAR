@@ -13,6 +13,9 @@ public class TimerCountUpScript : MonoBehaviour {
 	public int minutes;
 	private float oldSeconds;
 
+	private int finishMinutes;
+	private float finishSeconds;
+
 	VoiceRecordScript voiceRec;
 
 
@@ -25,17 +28,12 @@ public class TimerCountUpScript : MonoBehaviour {
 		voiceRec = GetComponent<VoiceRecordScript> ();
 		uptext = gameObjectText.GetComponent<TextMesh>();
 
-		uptext.text = "00:00 / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":" + (voiceRec.maxLengthSec % 60).ToString("00");
+		uptext.text = "00:00.0 / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":" + (voiceRec.maxLengthSec % 60).ToString("00.0");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(voiceRec.recStart != true) {
-			seconds = 0f;
-			minutes = 0;
-			oldSeconds= 0f;
-			uptext.text = "00:00 / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":"	+ (voiceRec.maxLengthSec % 60).ToString("00");
-		} else {
+		if(voiceRec.recStart) {
 			seconds += Time.deltaTime;
 
 			if (seconds >= 60f) {
@@ -43,11 +41,25 @@ public class TimerCountUpScript : MonoBehaviour {
 				seconds -= 60;
 			}
 
-			if ((int)seconds != (int)oldSeconds) {
-
-				uptext.text = minutes.ToString("00") + ":" + seconds.ToString("00") + " / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":"	+ (voiceRec.maxLengthSec % 60).ToString("00");
+			if (seconds != oldSeconds) {
+				uptext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":"	+ (voiceRec.maxLengthSec % 60).ToString("00.0");
 			}
+			finishMinutes = minutes;
+			finishSeconds = seconds;
 			oldSeconds = seconds;
+		} else {
+			seconds = 0f;
+			minutes = 0;
+			oldSeconds= 0f;
+			uptext.text = "00:00.0 / " + (voiceRec.maxLengthSec / 60).ToString("00") + ":"	+ (voiceRec.maxLengthSec % 60).ToString("00.0");
 		}
+	}
+
+	public int FinishMinutes () {
+		return finishMinutes;
+	}
+
+	public float FinishSeconds () {
+		return finishSeconds;
 	}
 }

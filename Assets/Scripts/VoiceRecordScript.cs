@@ -13,6 +13,8 @@ public class VoiceRecordScript : MonoBehaviour {
 
 	[System.NonSerialized]
 	public bool recStart;
+	[System.NonSerialized]
+	public bool playStart;
 
 	TimerCountUpScript countUp;
 
@@ -59,5 +61,6 @@ public class VoiceRecordScript : MonoBehaviour {
 		audioPlaySource = gameObject.GetComponent<AudioSource>();
 		audioPlaySource.clip = audioRecSource.clip;
 		audioPlaySource.Play();
+		playStart = true;
 	}
 }

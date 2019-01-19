@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PlayCountUpScript.cs" />
      <Compile Include="Assets\Scripts\TimerCountUpScript.cs" />
      <Compile Include="Assets\Scripts\VoiceRecordScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
