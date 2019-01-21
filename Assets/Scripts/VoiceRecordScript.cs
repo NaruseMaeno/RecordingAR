@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class VoiceRecordScript : MonoBehaviour {
 	
-	AudioSource audioRecSource;
+	static AudioClip audioClip = null;
+	// AudioSource audioRecSource;
 	AudioSource audioPlaySource;
 	public int maxLengthSec = 5;
 	public int frequency = 44100;
@@ -25,7 +26,7 @@ public class VoiceRecordScript : MonoBehaviour {
 			micName = device;
 		}
 		
-		audioRecSource = GetComponent<AudioSource>();
+		// audioRecSource = GetComponent<AudioSource>();
 		audioPlaySource = GetComponent<AudioSource>();
 
 		countUp = GetComponent<TimerCountUpScript> ();
@@ -40,7 +41,7 @@ public class VoiceRecordScript : MonoBehaviour {
 
 	public void RecStart () {
 		Debug.Log("Rec Start.");
-		audioRecSource.clip = Microphone.Start(micName, false, maxLengthSec, frequency);
+		audioClip = Microphone.Start(micName, false, maxLengthSec, frequency);
 
 		recStart = true;
 	}
@@ -59,8 +60,12 @@ public class VoiceRecordScript : MonoBehaviour {
 	public void RecPlay () {
 		Debug.Log("Rec Play.");
 		audioPlaySource = gameObject.GetComponent<AudioSource>();
-		audioPlaySource.clip = audioRecSource.clip;
+		audioPlaySource.clip = audioClip;
 		audioPlaySource.Play();
 		playStart = true;
+	}
+
+	public static AudioClip getAudioClip () {
+		return audioClip;
 	}
 }
