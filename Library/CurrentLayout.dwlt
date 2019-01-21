@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 442}
   m_MaxSize: {x: 18008, y: 10021}
   vertical: 0
-  controlID: 90
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 51
+  controlID: 12
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 37
+  controlID: 13
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 550
     width: 1302
     height: 221
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -328,7 +328,8 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scenes
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -340,7 +341,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 48250000
     m_LastClickedID: 9544
-    m_ExpandedIDs: 00000000e8290000582a0000
+    m_ExpandedIDs: 00000000f6290000682a0000b42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -368,18 +369,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e8290000582a0000a42a0000
+    m_ExpandedIDs: ffffffff00000000f6290000682a0000b42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TimerCountUpScript
-      m_OriginalName: TimerCountUpScript
+      m_Name: RecordScene
+      m_OriginalName: RecordScene
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10266
+      m_UserData: 11144
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -565,7 +566,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.11354883, y: 0.09405055, z: -0.010797876, w: 0.98901194}
     speed: 2
-    m_Value: {x: 0.11354883, y: 0.09405055, z: -0.010797876, w: 0.98901194}
+    m_Value: {x: -0.11354883, y: -0.09405056, z: 0.010797876, w: -0.989012}
   m_Size:
     m_Target: 1369.2932
     speed: 2
@@ -709,9 +710,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: f8a0d9ffeea8d9ffe8a9d9fff820daffe621daffcc2ddaff7e2edaffc42fdaffd22fdaffa45fdaffd460daff0462daff1e63daffe863daff568ddaffa890daff8291daff9492daff6293daffa8cadafff2cddaffe0cedaffd8cfdaffcee0daff04e2daff4a04dbffa607dbff0209dbff140adbff0c0bdbfffc0bdbfff40cdbffe20ddbffde0edbff7a17dbff8c18dbff7e19dbffca1adbffa420dbff503cdbff0c5edbff1e5fdbffcc6bdbff3c71dbff3e72dbff8c73dbff367edbffac80dbff3cbfdbff86c1dbfffa29dcfff42adcffa04fe2ffac4fe2ff425be2ff4e5be2fff666e2ff78f2e7ff7e40e9fff866e9ff6edbe9ff82dfe9ffde34eeff9e37eeffa062efff0065efffe665efffd066efffe4fbffff000000001035000058350000a2400000ac40000086410000224200002c42000016440000b2440000bc4400004c46000056460000264700004a470000e6470000f8470000ca490000964d0000324e0000ce4f0000ac510000d8530000f0560000
+    m_SelectedIDs: d8560000
+    m_LastClickedID: 22232
+    m_ExpandedIDs: 6461fefff466feff4c69feff107afeff2a96feff2e9afeffc6a4feffccb5feff54b9feff46bcfeff3ce2feffb4e7feff3006ffff6810ffffc61fffffda20ffffc82ffffff641ffff124cffff1e5cfffff664ffff526effffd89cffff7ec4ffff5ec5ffffb8e5ffffdcfbffff00000000dc2c0000fc2d0000942f0000b82f0000a6300000c8380000d83900008c3b00005a3c0000723d0000c63e0000764000008441000052440000004500006e460000024700001c4a0000144f00007e4f0000ca51000078560000e2560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +731,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
   m_ExpandedScenes:
-  - PlayObjectScene
+  - HomeScene
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0

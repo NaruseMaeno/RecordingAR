@@ -53,9 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ChangeSceneToHomeScript.cs" />
-     <Compile Include="Assets\Scripts\ChangeSceneToRecScript.cs" />
-     <Compile Include="Assets\Scripts\FadeControllerScript.cs" />
+     <Compile Include="Assets\Scripts\FadeControllerToHomeScript.cs" />
+     <Compile Include="Assets\Scripts\FadeControllerToRecScript.cs" />
      <Compile Include="Assets\Scripts\PlayCountUpScript.cs" />
      <Compile Include="Assets\Scripts\PlayObjectScript.cs" />
      <Compile Include="Assets\Scripts\TimerCountUpScript.cs" />

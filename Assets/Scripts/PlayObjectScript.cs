@@ -16,7 +16,6 @@ public class PlayObjectScript : MonoBehaviour {
 	void Update () {
 		if(audioSource.clip != null) {
 			Debug.Log("Find!");
-			audioSource.Play();
 		} else {
 			Debug.Log("null");
 		}

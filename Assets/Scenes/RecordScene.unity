@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 1841761807}
   - component: {fileID: 1841761810}
   - component: {fileID: 1841761809}
-  - component: {fileID: 1841761808}
+  - component: {fileID: 1841761811}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1303,7 +1303,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1841761808
+--- !u!114 &1841761809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1311,24 +1311,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841761806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd03a2cd2e5a72a41a237b8ddf7eee23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flagFadeOut: 0
-  flagFadeIn: 0
---- !u!114 &1841761809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1841761806}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41960785, g: 0.45791268, b: 0.69803923, a: 0}
+  m_Color: {r: 0.41960785, g: 0.45791268, b: 0.69803923, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1350,6 +1337,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841761806}
   m_CullTransparentMesh: 0
+--- !u!114 &1841761811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841761806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fd8585ba5b1d34e9e44df7b55c79a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagFadeOut: 0
+  flagFadeIn: 0
 --- !u!1 &1869240401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1534,6 @@ GameObject:
   - component: {fileID: 1914158187}
   - component: {fileID: 1914158186}
   - component: {fileID: 1914158185}
-  - component: {fileID: 1914158188}
   m_Layer: 5
   m_Name: HomeButton
   m_TagString: Untagged
@@ -1600,7 +1599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1914158188}
+      - m_Target: {fileID: 1841761811}
         m_MethodName: PushButtonChangeSceneToHome
         m_Mode: 1
         m_Arguments:
@@ -1647,17 +1646,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1914158183}
   m_CullTransparentMesh: 0
---- !u!114 &1914158188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1914158183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2054921d3bbed8e4280ad6a2e25b352f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2037275639
 GameObject:
   m_ObjectHideFlags: 0
