@@ -13,7 +13,6 @@ public class PlayCountUpScript : MonoBehaviour {
 	private int oldCountUpMinutes;
 	private float oldSeconds;
 	
-	TimerCountUpScript timeCountUp;
 	VoiceRecordScript voiceRec;
 
 	// Use this for initialization
@@ -24,7 +23,6 @@ public class PlayCountUpScript : MonoBehaviour {
 		oldCountUpSeconds = 0f;
 		oldCountUpMinutes = 0;
 		
-		timeCountUp = GetComponent<TimerCountUpScript> ();
 		voiceRec = GetComponent<VoiceRecordScript> ();
 		downtext = gameObjectText.GetComponent<TextMesh>();
 
@@ -34,10 +32,10 @@ public class PlayCountUpScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!voiceRec.recStart) {
-			if(timeCountUp.FinishMinutes() != oldCountUpMinutes ||  timeCountUp.FinishSeconds().ToString() != oldCountUpSeconds.ToString()) {
-				downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + timeCountUp.FinishMinutes().ToString("00") + ":" + timeCountUp.FinishSeconds().ToString("00.0");
-				oldCountUpSeconds = timeCountUp.FinishSeconds();
-				oldCountUpMinutes = timeCountUp.FinishMinutes();
+			if(TimerCountUpScript.FinishMinutes() != oldCountUpMinutes ||  TimerCountUpScript.FinishSeconds().ToString() != oldCountUpSeconds.ToString()) {
+				downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + TimerCountUpScript.FinishMinutes().ToString("00") + ":" + TimerCountUpScript.FinishSeconds().ToString("00.0");
+				oldCountUpSeconds = TimerCountUpScript.FinishSeconds();
+				oldCountUpMinutes = TimerCountUpScript.FinishMinutes();
 			}
 
 			if(voiceRec.playStart == true) {
@@ -49,12 +47,12 @@ public class PlayCountUpScript : MonoBehaviour {
 				}
 
 				if(seconds != oldSeconds) {
-					downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + timeCountUp.FinishMinutes().ToString("00") + ":" + timeCountUp.FinishSeconds().ToString("00.0");
+					downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + TimerCountUpScript.FinishMinutes().ToString("00") + ":" + TimerCountUpScript.FinishSeconds().ToString("00.0");
 				}
 				oldSeconds = seconds;
 
-				if(minutes.ToString("00") == timeCountUp.FinishMinutes().ToString("00") && seconds.ToString("00.0") == timeCountUp.FinishSeconds().ToString("00.0")) {
-					downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + timeCountUp.FinishMinutes().ToString("00") + ":" + timeCountUp.FinishSeconds().ToString("00.0");
+				if(minutes.ToString("00") == TimerCountUpScript.FinishMinutes().ToString("00") && seconds.ToString("00.0") == TimerCountUpScript.FinishSeconds().ToString("00.0")) {
+					downtext.text = minutes.ToString("00") + ":" + seconds.ToString("00.0") + " / " + TimerCountUpScript.FinishMinutes().ToString("00") + ":" + TimerCountUpScript.FinishSeconds().ToString("00.0");
 					minutes = 0;
 					seconds = 0f;
 					oldSeconds = 0f;

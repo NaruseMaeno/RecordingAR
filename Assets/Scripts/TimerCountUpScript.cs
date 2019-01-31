@@ -13,8 +13,10 @@ public class TimerCountUpScript : MonoBehaviour {
 	public int minutes;
 	private float oldSeconds;
 
-	private int finishMinutes;
-	private float finishSeconds;
+	[System.NonSerialized]
+	public static int finishMinutes;
+	[System.NonSerialized]
+	public static float finishSeconds;
 
 	VoiceRecordScript voiceRec;
 
@@ -55,11 +57,11 @@ public class TimerCountUpScript : MonoBehaviour {
 		}
 	}
 
-	public int FinishMinutes () {
+	public static int FinishMinutes () {
 		return finishMinutes;
 	}
 
-	public float FinishSeconds () {
+	public static float FinishSeconds () {
 		return finishSeconds;
 	}
 }

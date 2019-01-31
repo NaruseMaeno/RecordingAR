@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FadeControllerToRecScript : MonoBehaviour {
 
-	private float fadeSpeed = 0.04f;
+	private float fadeSpeed = 0.1f;
 	private float red, blue, green, alfa;
 
 	public bool flagFadeOut = false;

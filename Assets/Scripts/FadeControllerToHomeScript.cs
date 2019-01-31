@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FadeControllerToHomeScript : MonoBehaviour {
 
-	private float fadeSpeed = 0.04f;
+	private float fadeSpeed = 0.1f;
 	private float red, blue, green, alfa;
 
 	public bool flagFadeOut = false;
@@ -48,7 +48,7 @@ public class FadeControllerToHomeScript : MonoBehaviour {
 		if(alfa >= 1) {
 			flagFadeOut = false;
 			checker = true;
-			SceneManager.LoadScene("HomeScene");
+			SceneManager.LoadScene("HelloAR");
 		}
 	}
 
